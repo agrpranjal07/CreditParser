@@ -1,0 +1,46 @@
+{
+  "name": "creditsea",
+  "version": "1.0.0",
+  "description": "Full-stack MERN application for parsing Experian XML credit reports",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "start:backend": "cd backend && npm start",
+    "build:frontend": "cd frontend && npm run build",
+    "test:backend": "cd backend && npm test",
+    "test:frontend": "cd frontend && npm test",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "clean": "rm -rf backend/node_modules frontend/node_modules node_modules"
+  },
+  "keywords": [
+    "credit",
+    "xml",
+    "parser",
+    "experian",
+    "mern",
+    "react",
+    "nodejs",
+    "mongodb",
+    "cloudinary"
+  ],
+  "author": "CreditSea Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/creditsea.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/creditsea/issues"
+  },
+  "homepage": "https://github.com/yourusername/creditsea#readme"
+}
